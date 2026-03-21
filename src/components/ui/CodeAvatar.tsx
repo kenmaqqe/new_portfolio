@@ -91,7 +91,7 @@ export default function CodeAvatar() {
   return (
     <div
       ref={containerRef}
-      className="w-[280px] h-[280px] rounded-2xl bg-surface border border-border overflow-hidden flex flex-col"
+      className="w-[280px] h-[320px] rounded-2xl bg-surface border border-border overflow-hidden flex flex-col"
     >
       <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
         <span className="w-3 h-3 rounded-full bg-foreground-subtle/50" />
@@ -99,9 +99,9 @@ export default function CodeAvatar() {
         <span className="w-3 h-3 rounded-full bg-foreground-subtle/50" />
       </div>
 
-      <div className="flex-1 p-3 font-mono text-[9px] leading-[1.25] overflow-hidden">
+      <div className="flex-1 p-4 font-mono text-[10px] leading-[1.35] overflow-hidden">
         {codeLines.map((line, lineIdx) => (
-          <div key={lineIdx} className="whitespace-pre h-[1.15rem]">
+          <div key={lineIdx} className="whitespace-pre h-[1.35rem]">
             <span className="text-foreground-subtle select-none">
               {String(lineIdx + 1).padStart(2, " ")}{" "}
             </span>
@@ -110,7 +110,7 @@ export default function CodeAvatar() {
             </span>
             {showCursor &&
               lineIdx === displayedChars.findIndex((c, i) => c < codeLines[i].length) && (
-                <span className="inline-block w-1 h-2.5 bg-foreground/70 ml-0.5 animate-pulse" />
+                <span className="inline-block w-1 h-3 bg-foreground/70 ml-0.5 animate-pulse" />
               )}
           </div>
         ))}
