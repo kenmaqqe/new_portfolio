@@ -146,7 +146,7 @@ export default function Hero() {
 
         <TextReveal
           tag="h1"
-          className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
+          className="text-4xl md:text-7xl font-bold tracking-tight mb-6 whitespace-nowrap"
         >
           {heroData.name}
         </TextReveal>
