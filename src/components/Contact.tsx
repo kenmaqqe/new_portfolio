@@ -62,15 +62,15 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="group flex items-center justify-between py-10 border-b border-border hover:px-6 transition-all duration-500 ease-expo"
             >
-              <div className="flex items-baseline gap-6">
-                <span className="text-[10px] uppercase font-mono text-foreground-subtle group-hover:text-foreground transition-colors">
+              <div className="flex items-baseline gap-4 md:gap-6 min-w-0">
+                <span className="text-[10px] uppercase font-mono text-foreground-subtle group-hover:text-foreground transition-colors shrink-0">
                   {contact.label}
                 </span>
-                <span className="text-3xl md:text-5xl font-medium text-foreground tracking-tight group-hover:translate-x-4 transition-transform duration-500">
+                <span className="text-xl sm:text-3xl md:text-5xl font-medium text-foreground tracking-tight group-hover:translate-x-4 transition-transform duration-500 break-all sm:break-normal">
                   {contact.value}
                 </span>
               </div>
-              <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:bg-foreground group-hover:border-foreground group-hover:text-background transition-all duration-500 rotate-[-45deg] group-hover:rotate-0">
+              <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:bg-foreground group-hover:border-foreground group-hover:text-background transition-all duration-500 rotate-[-45deg] group-hover:rotate-0 shrink-0">
                 <ArrowUpRight size={24} />
               </div>
             </a>
