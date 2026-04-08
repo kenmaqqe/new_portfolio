@@ -93,17 +93,24 @@ export default function Projects() {
           {projects.map((project, i) => (
             <div
               key={project.title}
-              className={`bg-surface border border-border rounded-2xl p-6 transition-shadow duration-300 hover:shadow-lg hover:shadow-accent/10 ${
+              data-cursor-text="view"
+              data-cursor-img={project.image}
+              className={`bg-surface/50 backdrop-blur-md border border-border rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-foreground/5 hover:border-foreground/20 group ${
                 i === 0 ? "sm:col-span-2" : ""
               }`}
             >
-              <h3 className="text-xl font-semibold mb-2 text-foreground">
-                {project.title}
-              </h3>
-              <p className="text-foreground-muted text-sm leading-relaxed mb-4">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-semibold text-foreground group-hover:text-white transition-colors">
+                  {project.title}
+                </h3>
+                <span className="text-[10px] font-mono text-foreground-subtle border border-border px-2 py-0.5 rounded-full uppercase tracking-tighter">
+                  2024
+                </span>
+              </div>
+              <p className="text-foreground-muted text-sm leading-relaxed mb-4 min-h-[3rem]">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.tags.map((tag) => (
                   <Tag key={tag}>{tag}</Tag>
                 ))}

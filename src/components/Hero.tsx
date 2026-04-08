@@ -129,10 +129,18 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center px-6"
     >
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none opacity-20"
+        style={{
+          backgroundImage: `linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px)`,
+          backgroundSize: '40px 40px',
+          maskImage: 'radial-gradient(circle at center, black, transparent 80%)'
+        }}
+      />
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-        style={{ zIndex: 0 }}
+        style={{ zIndex: 1 }}
       />
       <div className="relative z-10 text-center max-w-3xl">
         <Parallax speed={0.15}>

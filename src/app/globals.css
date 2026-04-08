@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --foreground-muted: #999;
+  --background: #050505;
+  --foreground: #f0f0f0;
+  --foreground-muted: #a1a1a1;
   --foreground-subtle: #666;
-  --accent: #333;
-  --accent-hover: #444;
-  --border: #222;
-  --surface: #111;
-  --surface-hover: #1a1a1a;
+  --accent: #222;
+  --accent-hover: #333;
+  --border: #1a1a1a;
+  --surface: #0a0a0a;
+  --surface-hover: #111;
+  --noise: url("https://grainy-gradients.vercel.app/noise.svg");
 }
 
 @theme inline {
@@ -26,8 +27,17 @@
   --font-mono: var(--font-geist-mono);
 }
 
+h1, h2, h3 {
+  letter-spacing: -0.025em;
+}
+
+@utility ease-expo {
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
@@ -36,9 +46,25 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: var(--noise);
+  filter: contrast(120%) brightness(120%);
 }
 
 ::selection {
-  background: #333;
-  color: #ededed;
+  background: var(--foreground);
+  color: var(--background);
 }

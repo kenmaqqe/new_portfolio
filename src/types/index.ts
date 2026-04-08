@@ -14,6 +14,7 @@ export interface Project {
   tags: string[];
   github?: string;
   live: string;
+  image?: string;
 }
 
 export interface SkillCategory {
@@ -46,4 +47,12 @@ export interface AboutData {
   title: string;
   paragraphs: string[];
   stats: { value: string; label: string }[];
+}
+
+export interface ExperienceItem {
+  company: string;
+  role: string;
+  period: string;
+  points: string[];
+  skills?: string[];
 }
