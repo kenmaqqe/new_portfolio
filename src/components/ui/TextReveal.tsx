@@ -21,7 +21,7 @@ export default function TextReveal({
   useEffect(() => {
     if (!ref.current) return;
 
-    const chars = ref.current.querySelectorAll("span");
+    const chars = ref.current.querySelectorAll(".reveal-char");
 
     gsap.fromTo(
       chars,
@@ -41,18 +41,27 @@ export default function TextReveal({
         },
       }
     );
-  }, [delay]);
+  }, [delay, children]);
+
+  const words = children.split(" ");
 
   return (
-    <div ref={ref} className="perspective-[800px]">
+    <div ref={ref} className="perspective-midrange">
       <Tag className={className}>
-        {children.split("").map((char, i) => (
-          <span
-            key={i}
-            className="inline-block"
-            style={{ transformStyle: "preserve-3d" }}
-          >
-            {char === " " ? "\u00A0" : char}
+        {words.map((word, wordIndex) => (
+          <span key={wordIndex} className="inline-block whitespace-nowrap">
+            {word.split("").map((char, charIndex) => (
+              <span
+                key={charIndex}
+                className="inline-block reveal-char"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                {char}
+              </span>
+            ))}
+            {wordIndex < words.length - 1 && (
+              <span className="inline-block">&nbsp;</span>
+            )}
           </span>
         ))}
       </Tag>
