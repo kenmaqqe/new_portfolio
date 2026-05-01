@@ -38,6 +38,7 @@ h1, h2, h3 {
 html {
   scroll-behavior: smooth;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {

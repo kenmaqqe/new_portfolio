@@ -91,7 +91,7 @@ export default function CodeAvatar() {
   return (
     <div
       ref={containerRef}
-      className="w-[280px] h-[340px] rounded-2xl bg-surface border border-border overflow-hidden flex flex-col"
+      className="w-full max-w-[280px] h-[340px] rounded-2xl bg-surface border border-border overflow-hidden flex flex-col"
     >
       <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
         <span className="w-3 h-3 rounded-full bg-foreground-subtle/50" />
