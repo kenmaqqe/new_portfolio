@@ -1,0 +1,760 @@
+{
+  "nodes": [
+    {
+      "id": "eslint_config_mjs",
+      "label": "ESLint Configuration",
+      "file_type": "code",
+      "source_file": "eslint.config.mjs",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "next_env_d_ts",
+      "label": "Next.js Environment Type Definitions",
+      "file_type": "code",
+      "source_file": "next-env.d.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "next_config_ts",
+      "label": "Next.js Configuration",
+      "file_type": "code",
+      "source_file": "next.config.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "postcss_config_mjs",
+      "label": "PostCSS Configuration",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "middleware_ts",
+      "label": "Next.js Middleware",
+      "file_type": "code",
+      "source_file": "middleware.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_app_layout_tsx",
+      "label": "Root Layout",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_app_locale_layout_tsx",
+      "label": "Locale-specific Root Layout",
+      "file_type": "code",
+      "source_file": "src/app/[locale]/layout.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_app_locale_page_tsx",
+      "label": "Localized Home Page",
+      "file_type": "code",
+      "source_file": "src/app/[locale]/page.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_lib_gsap_ts",
+      "label": "GSAP Library Wrapper",
+      "file_type": "code",
+      "source_file": "src/lib/gsap.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_components_Hero_tsx",
+      "label": "Hero Section Component",
+      "file_type": "code",
+      "source_file": "src/components/Hero.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_components_About_tsx",
+      "label": "About Section Component",
+      "file_type": "code",
+      "source_file": "src/components/About.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_components_Skills_tsx",
+      "label": "Skills Section Component",
+      "file_type": "code",
+      "source_file": "src/components/Skills.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_components_Projects_tsx",
+      "label": "Projects Section Component",
+      "file_type": "code",
+      "source_file": "src/components/Projects.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_components_Contact_tsx",
+      "label": "Contact Section Component",
+      "file_type": "code",
+      "source_file": "src/components/Contact.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_components_Navbar_tsx",
+      "label": "Navigation Bar Component",
+      "file_type": "code",
+      "source_file": "src/components/Navbar.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_components_Experience_tsx",
+      "label": "Experience Section Component",
+      "file_type": "code",
+      "source_file": "src/components/Experience.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_components_Providers_tsx",
+      "label": "Next-intl Providers Wrapper",
+      "file_type": "code",
+      "source_file": "src/components/Providers.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_components_ui_SectionHeading_tsx",
+      "label": "Section Heading UI Component",
+      "file_type": "code",
+      "source_file": "src/components/ui/SectionHeading.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_components_ui_Card_tsx",
+      "label": "Card UI Component",
+      "file_type": "code",
+      "source_file": "src/components/ui/Card.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "src_components_ui_Tag_tsx",
+      "label": "Tag UI Component",
+      "file_type": "code",
+      "source_file": "src/components/ui/Tag.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "button",
+      "label": "Button",
+      "file_type": "code",
+      "source_file": "src/components/ui/Button.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "icon_button",
+      "label": "IconButton",
+      "file_type": "code",
+      "source_file": "src/components/ui/IconButton.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "custom_cursor",
+      "label": "CustomCursor",
+      "file_type": "code",
+      "source_file": "src/components/ui/CustomCursor.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "magnetic",
+      "label": "Magnetic",
+      "file_type": "code",
+      "source_file": "src/components/ui/Magnetic.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "text_reveal",
+      "label": "TextReveal",
+      "file_type": "code",
+      "source_file": "src/components/ui/TextReveal.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "parallax",
+      "label": "Parallax",
+      "file_type": "code",
+      "source_file": "src/components/ui/Parallax.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "code_avatar",
+      "label": "CodeAvatar",
+      "file_type": "code",
+      "source_file": "src/components/ui/CodeAvatar.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "smooth_scroll",
+      "label": "SmoothScroll",
+      "file_type": "code",
+      "source_file": "src/components/ui/SmoothScroll.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "entry_loader",
+      "label": "EntryLoader",
+      "file_type": "code",
+      "source_file": "src/components/ui/EntryLoader.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "command_center",
+      "label": "CommandCenter",
+      "file_type": "code",
+      "source_file": "src/components/ui/CommandCenter.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "language_switcher",
+      "label": "LanguageSwitcher",
+      "file_type": "code",
+      "source_file": "src/components/ui/LanguageSwitcher.tsx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "types",
+      "label": "Type Definitions",
+      "file_type": "code",
+      "source_file": "src/types/index.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "data",
+      "label": "Content Data",
+      "file_type": "code",
+      "source_file": "src/data/index.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "i18n_request",
+      "label": "i18n Request Config",
+      "file_type": "code",
+      "source_file": "src/i18n/request.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "i18n_navigation",
+      "label": "i18n Navigation",
+      "file_type": "code",
+      "source_file": "src/i18n/navigation.ts",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme",
+      "label": "README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "improvement_plan",
+      "label": "Improvement Plan",
+      "file_type": "document",
+      "source_file": "improvement_plan.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "file_fileicon",
+      "label": "File Icon",
+      "file_type": "image",
+      "source_file": "public/file.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "globe_globeicon",
+      "label": "Globe Icon",
+      "file_type": "image",
+      "source_file": "public/globe.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "window_windowicon",
+      "label": "Window Icon",
+      "file_type": "image",
+      "source_file": "public/window.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "next_nextjslogo",
+      "label": "Next.js Logo",
+      "file_type": "image",
+      "source_file": "public/next.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "vercel_vercellogo",
+      "label": "Vercel Logo",
+      "file_type": "image",
+      "source_file": "public/vercel.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "src_components_Hero_tsx",
+      "target": "src_lib_gsap_ts",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Hero.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_About_tsx",
+      "target": "src_lib_gsap_ts",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/About.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_Skills_tsx",
+      "target": "src_lib_gsap_ts",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Skills.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_Projects_tsx",
+      "target": "src_lib_gsap_ts",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Projects.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_Contact_tsx",
+      "target": "src_lib_gsap_ts",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Contact.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_Experience_tsx",
+      "target": "src_lib_gsap_ts",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/Experience.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "custom_cursor",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "text_reveal",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "magnetic",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "parallax",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "code_avatar",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "improvement_plan",
+      "target": "smooth_scroll",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "improvement_plan.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "improvement_plan",
+      "target": "magnetic",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "improvement_plan.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "improvement_plan",
+      "target": "custom_cursor",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "improvement_plan.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "improvement_plan",
+      "target": "language_switcher",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "improvement_plan.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "button",
+      "target": "icon_button",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/components/ui/Button.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "custom_cursor",
+      "target": "magnetic",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "src/components/ui/CustomCursor.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "text_reveal",
+      "target": "code_avatar",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.6,
+      "source_file": "src/components/ui/TextReveal.tsx",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "next_nextjslogo",
+      "target": "vercel_vercellogo",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": null,
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "page_sections_with_gsap",
+      "label": "Page Sections Using GSAP Animations",
+      "nodes": [
+        "src_components_Hero_tsx",
+        "src_components_About_tsx",
+        "src_components_Skills_tsx",
+        "src_components_Projects_tsx",
+        "src_components_Experience_tsx",
+        "src_components_Contact_tsx"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/app/[locale]/page.tsx"
+    },
+    {
+      "id": "intl_next_intl_components",
+      "label": "Components Using next-intl for Internationalization",
+      "nodes": [
+        "src_components_Hero_tsx",
+        "src_components_About_tsx",
+        "src_components_Skills_tsx",
+        "src_components_Projects_tsx",
+        "src_components_Contact_tsx",
+        "src_components_Navbar_tsx",
+        "src_components_Experience_tsx",
+        "src_app_locale_layout_tsx"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "src/app/[locale]/layout.tsx"
+    },
+    {
+      "id": "shared_ui_components",
+      "label": "Shared UI Components",
+      "nodes": [
+        "src_components_ui_SectionHeading_tsx",
+        "src_components_ui_Card_tsx",
+        "src_components_ui_Tag_tsx"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/components/ui"
+    },
+    {
+      "id": "reusable_ui_components",
+      "label": "Reusable UI Components",
+      "nodes": [
+        "button",
+        "icon_button",
+        "custom_cursor",
+        "magnetic",
+        "text_reveal",
+        "parallax",
+        "code_avatar",
+        "smooth_scroll",
+        "entry_loader",
+        "command_center",
+        "language_switcher"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui"
+    },
+    {
+      "id": "scroll_trigger_consumers",
+      "label": "ScrollTrigger Consumers",
+      "nodes": [
+        "text_reveal",
+        "parallax",
+        "code_avatar"
+      ],
+      "relation": "use_scroll_trigger",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/TextReveal.tsx"
+    },
+    {
+      "id": "gsap_animation_users",
+      "label": "GSAP Animation Users",
+      "nodes": [
+        "custom_cursor",
+        "magnetic",
+        "text_reveal",
+        "parallax",
+        "code_avatar",
+        "entry_loader",
+        "command_center"
+      ],
+      "relation": "use_gsap_for_animations",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/CustomCursor.tsx"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
