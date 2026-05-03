@@ -1,14 +1,16 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap } from "@/lib/gsap";
-import { heroData } from "@/data";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { useTranslations, useLocale } from "next-intl";
 import Magnetic from "@/components/ui/Magnetic";
 import TextReveal from "@/components/ui/TextReveal";
 import Parallax from "@/components/ui/Parallax";
 import type { Particle } from "@/types";
 
 export default function Hero() {
+  const t = useTranslations("hero");
+  const locale = useLocale();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const roleRef = useRef<HTMLParagraphElement>(null);
@@ -110,19 +112,23 @@ export default function Hero() {
     const elements = [subtitleRef.current, roleRef.current, ctaRef.current];
     const valid = elements.filter(Boolean);
 
-    gsap.fromTo(
-      valid,
-      { opacity: 0, y: 40 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        delay: 0.5,
-        ease: "power3.out",
-      }
-    );
-  }, []);
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        valid,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          delay: 0.5,
+          ease: "power3.out",
+        }
+      );
+    });
+
+    return () => ctx.revert();
+  }, [locale]);
 
   return (
     <section
@@ -148,7 +154,7 @@ export default function Hero() {
             ref={subtitleRef}
             className="font-mono text-foreground-muted text-sm tracking-widest uppercase mb-4 opacity-0"
           >
-            {heroData.greeting}
+            {t("greeting")}
           </p>
         </Parallax>
 
@@ -156,7 +162,7 @@ export default function Hero() {
           tag="h1"
           className="text-4xl md:text-7xl font-bold tracking-tight mb-6"
         >
-          {heroData.name}
+          {t("name")}
         </TextReveal>
 
         <Parallax speed={0.1}>
@@ -164,19 +170,19 @@ export default function Hero() {
             ref={roleRef}
             className="text-xl text-foreground-muted mb-8 opacity-0"
           >
-            {heroData.role}
+            {t("role")}
           </p>
         </Parallax>
 
         <div ref={ctaRef} className="flex gap-4 justify-center opacity-0">
-          <Magnetic as="a" href={heroData.cta.primary.href}>
+          <Magnetic as="a" href="#projects">
             <span className="px-8 py-3 bg-foreground text-background rounded-full font-medium hover:opacity-90 transition-opacity inline-block">
-              {heroData.cta.primary.label}
+              {t("cta.primary")}
             </span>
           </Magnetic>
-          <Magnetic as="a" href={heroData.cta.secondary.href}>
+          <Magnetic as="a" href="#contact">
             <span className="px-8 py-3 border border-border rounded-full font-medium hover:border-accent transition-colors inline-block">
-              {heroData.cta.secondary.label}
+              {t("cta.secondary")}
             </span>
           </Magnetic>
         </div>

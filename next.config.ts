@@ -1,5 +1,10 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
-const nextConfig: NextConfig = {};
+const withNextIntl = createNextIntlPlugin("./src/app/i18n.ts");
 
-export default nextConfig;
+const nextConfig: NextConfig = {
+  turbopack: {},
+};
+
+export default withNextIntl(nextConfig);

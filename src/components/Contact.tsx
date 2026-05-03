@@ -2,12 +2,22 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
-import { contacts } from "@/data";
+import { useTranslations, useLocale } from "next-intl";
 import TextReveal from "@/components/ui/TextReveal";
 import { ArrowUpRight } from "lucide-react";
 import Magnetic from "@/components/ui/Magnetic";
+import { Link } from "@/i18n/navigation";
+
+const contactHrefs = {
+  email: "mailto:tymoshenko.d.o@tuta.io",
+  github: "https://github.com/kenmaqqe",
+  linkedin: "https://linkedin.com/in/kenmaqqe",
+  telegram: "https://t.me/kenmaqqe",
+};
 
 export default function Contact() {
+  const t = useTranslations("contact");
+  const locale = useLocale();
   const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -35,7 +45,17 @@ export default function Contact() {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [locale]);
+
+  const contactItems = [
+    { key: "email", label: t("items.email.label"), value: t("items.email.value") },
+    { key: "github", label: t("items.github.label"), value: t("items.github.value") },
+    { key: "linkedin", label: t("items.linkedin.label"), value: t("items.linkedin.value") },
+    { key: "telegram", label: t("items.telegram.label"), value: t("items.telegram.value") },
+  ];
+
+  const currentYear = new Date().getFullYear();
+  const copyright = t("copyright", { year: currentYear.toString() });
 
   return (
     <section
@@ -46,18 +66,18 @@ export default function Contact() {
       <div ref={contentRef} className="max-w-4xl w-full">
         <div className="mb-20">
           <TextReveal tag="h2" className="text-5xl md:text-8xl font-black mb-8 tracking-tighter">
-            {"Let's create something together."}
+            {t("heading")}
           </TextReveal>
           <p className="text-foreground-muted text-xl max-w-xl">
-            Currently looking for new opportunities and interesting projects to dive into.
+            {t("description")}
           </p>
         </div>
 
         <div className="flex flex-col gap-0 border-t border-border">
-          {contacts.map((contact) => (
+          {contactItems.map((contact) => (
             <a
-              key={contact.label}
-              href={contact.href}
+              key={contact.key}
+              href={contactHrefs[contact.key as keyof typeof contactHrefs]}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between py-10 border-b border-border hover:px-6 transition-all duration-500 ease-expo"
@@ -79,12 +99,12 @@ export default function Contact() {
 
         <div className="mt-24 pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-xs font-mono text-foreground-subtle uppercase tracking-widest">
-            © {new Date().getFullYear()} Tymoshenko Dmytro. All rights reserved.
+            {copyright}
           </p>
           <div className="flex gap-8">
             <Magnetic>
-              <a href="#hero" className="text-xs font-mono text-foreground-muted hover:text-foreground uppercase tracking-widest transition-colors">
-                Back to Top
+              <a href="#hero" className="text-xs font-mono text-foreground-muted hover:text-foreground uppercase tracking-widest transition-colors cursor-pointer">
+                {t("backToTop")}
               </a>
             </Magnetic>
           </div>

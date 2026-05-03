@@ -1,14 +1,17 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap } from "@/lib/gsap";
-import { aboutData } from "@/data";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { useTranslations, useLocale } from "next-intl";
 import CodeAvatar from "@/components/ui/CodeAvatar";
 
 export default function About() {
+  const t = useTranslations("about");
   const sectionRef = useRef<HTMLElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+
+  const locale = useLocale();
 
   useEffect(() => {
     if (!sectionRef.current || !imageRef.current || !textRef.current) return;
@@ -48,7 +51,9 @@ export default function About() {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [locale]);
+
+  const paragraphs = t.raw("paragraphs") as string[];
 
   return (
     <section
@@ -63,32 +68,29 @@ export default function About() {
 
         <div ref={textRef}>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {aboutData.title}
+            {t("title")}
           </h2>
-          {aboutData.paragraphs.map((text, i) => (
+          {paragraphs.map((text, i) => (
             <p
               key={i}
               className={`text-foreground-muted text-lg leading-relaxed ${
-                i === aboutData.paragraphs.length - 1 ? "mb-6" : "mb-4"
+                i === paragraphs.length - 1 ? "mb-6" : "mb-4"
               }`}
             >
               {text}
             </p>
           ))}
           <div className="flex gap-4">
-            {aboutData.stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="px-4 py-2 bg-surface rounded-lg border border-border"
-              >
-                <span className="text-foreground font-mono text-sm">
-                  {stat.value}
-                </span>
-                <span className="text-foreground-muted text-sm ml-2">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
+            <div
+              className="px-4 py-2 bg-surface rounded-lg border border-border"
+            >
+              <span className="text-foreground font-mono text-sm">
+                2+
+              </span>
+              <span className="text-foreground-muted text-sm ml-2">
+                {t("stats.years")}
+              </span>
+            </div>
           </div>
         </div>
       </div>

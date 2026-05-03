@@ -1,14 +1,17 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap } from "@/lib/gsap";
-import { experiences } from "@/data";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { useTranslations, useLocale } from "next-intl";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Tag from "@/components/ui/Tag";
 
 export default function Experience() {
+  const t = useTranslations("experience");
   const sectionRef = useRef<HTMLElement>(null);
   const itemsRef = useRef<HTMLDivElement>(null);
+
+  const locale = useLocale();
 
   useEffect(() => {
     if (!sectionRef.current || !itemsRef.current) return;
@@ -34,7 +37,15 @@ export default function Experience() {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [locale]);
+
+  const experiences = t.raw("items") as Array<{
+    company: string;
+    role: string;
+    period: string;
+    points: string[];
+    skills?: string[];
+  }>;
 
   return (
     <section
@@ -43,7 +54,7 @@ export default function Experience() {
       className="min-h-[50vh] flex items-center justify-center px-6 py-24 bg-background"
     >
       <div className="max-w-4xl w-full">
-        <SectionHeading>Experience</SectionHeading>
+        <SectionHeading>{t("heading")}</SectionHeading>
         <div ref={itemsRef} className="space-y-12 border-l border-border pl-8 relative ml-4">
           {experiences.map((exp, i) => (
             <div key={i} className="relative group">

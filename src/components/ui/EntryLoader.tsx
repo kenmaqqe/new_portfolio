@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { gsap } from "@/lib/gsap";
+import { useTranslations } from "next-intl";
 
 export default function EntryLoader() {
+  const t = useTranslations("loader");
   const [percent, setPercent] = useState(0);
   const [complete, setComplete] = useState(false);
 
@@ -46,7 +48,7 @@ export default function EntryLoader() {
       <div className="loader-content relative z-20 h-full flex items-center justify-center">
         <div className="text-center">
           <p className="font-mono text-xs tracking-widest text-foreground-muted mb-4 uppercase">
-            Initializing Experience
+            {t("initializing")}
           </p>
           <h2 className="text-6xl md:text-8xl font-bold text-background tracking-tighter">
             {percent}%

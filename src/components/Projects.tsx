@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap } from "@/lib/gsap";
-import { projects } from "@/data";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { useTranslations, useLocale } from "next-intl";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Tag from "@/components/ui/Tag";
 import IconButton from "@/components/ui/IconButton";
+import { projects } from "@/data";
 
 const GitHubIcon = (
   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -30,8 +31,11 @@ const ExternalIcon = (
 );
 
 export default function Projects() {
+  const t = useTranslations("projects");
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
+
+  const locale = useLocale();
 
   useEffect(() => {
     if (!sectionRef.current || !cardsRef.current) return;
@@ -79,7 +83,12 @@ export default function Projects() {
     });
 
     return () => ctx.revert();
-  }, []);
+  }, [locale]);
+
+  const translatedProjects = t.raw("items") as Array<{
+    title: string;
+    description: string;
+  }>;
 
   return (
     <section
@@ -88,12 +97,12 @@ export default function Projects() {
       className="min-h-screen flex items-center justify-center px-6 py-24"
     >
       <div className="max-w-5xl w-full">
-        <SectionHeading>Projects</SectionHeading>
+        <SectionHeading>{t("heading")}</SectionHeading>
         <div ref={cardsRef} className="grid gap-6 sm:grid-cols-2">
           {projects.map((project, i) => (
             <div
               key={project.title}
-              data-cursor-text="view"
+              data-cursor-text={t("view")}
               data-cursor-img={project.image}
               className={`bg-surface/50 backdrop-blur-md border border-border rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-foreground/5 hover:border-foreground/20 group ${
                 i === 0 ? "sm:col-span-2" : ""
@@ -101,14 +110,14 @@ export default function Projects() {
             >
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-semibold text-foreground group-hover:text-white transition-colors">
-                  {project.title}
+                  {translatedProjects[i].title}
                 </h3>
                 <span className="text-[10px] font-mono text-foreground-subtle border border-border px-2 py-0.5 rounded-full uppercase tracking-tighter">
                   2024
                 </span>
               </div>
               <p className="text-foreground-muted text-sm leading-relaxed mb-4 min-h-[3rem]">
-                {project.description}
+                {translatedProjects[i].description}
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tags.map((tag) => (
@@ -118,11 +127,11 @@ export default function Projects() {
               <div className="flex gap-3">
                 {project.github && (
                   <IconButton href={project.github} icon={GitHubIcon}>
-                    GitHub
+                    {t("github")}
                   </IconButton>
                 )}
                 <IconButton href={project.live} icon={ExternalIcon} variant="filled">
-                  Live
+                  {t("live")}
                 </IconButton>
               </div>
             </div>

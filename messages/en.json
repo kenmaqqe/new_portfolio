@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "title": "Portfolio | Dmytro - Frontend Developer",
+    "description": "Frontend developer portfolio showcasing projects and skills"
+  },
+  "nav": {
+    "available": "AVAILABLE",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Tymoshenko Dmytro",
+    "role": "Frontend Developer (React.js, Next.js, TypeScript)",
+    "cta": {
+      "primary": "View Projects",
+      "secondary": "Contact Me"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      "I'm a frontend developer focused on building clean, performant web applications with React and Next.js.",
+      "With experience in TypeScript, Tailwind CSS, and modern tooling, I create interfaces that are both functional and visually refined."
+    ],
+    "stats": {
+      "years": "Years of Experience"
+    }
+  },
+  "projects": {
+    "heading": "Projects",
+    "view": "View",
+    "github": "GitHub",
+    "live": "Live Demo",
+    "items": [
+      {
+        "title": "BullyChat",
+        "description": "AI-powered chat application supporting Groq LLM provider with markdown rendering and math expressions."
+      },
+      {
+        "title": "Frontend Error Observatory",
+        "description": "Error monitoring dashboard for frontend applications with real-time data, JSON viewer, dark mode, and responsive UI."
+      },
+      {
+        "title": "СТО на Дорожній",
+        "description": "Business website for a car service station with service catalog, pricing, FAQ, and contact form. Ukrainian localization."
+      },
+      {
+        "title": "Contrlve Game",
+        "description": "A fan web game based on a popular Ukrainian show. Features turn-based logic, complex state transitions, and frame-accurate animations."
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Skills & Technologies",
+    "categories": {
+      "frontend": "Frontend",
+      "styling": "Styling",
+      "tools": "Tools",
+      "other": "Other"
+    }
+  },
+  "experience": {
+    "heading": "Experience",
+    "items": [
+      {
+        "company": "T+ Market (E-Commerce Platform)",
+        "role": "Frontend Developer",
+        "period": "Dec 2024 – Present",
+        "points": [
+          "Designed and implemented a multi-level product filtering system with nested sub-filters using URL params for state persistence (SSR-compatible).",
+          "Built and maintained a Next.js component library integrating 5+ REST APIs using Axios and custom hooks.",
+          "Refactored 15+ legacy components reducing code duplication by ~25% and implemented Jest/RTL unit tests."
+        ],
+        "skills": [
+          "Next.js",
+          "TypeScript",
+          "SSR",
+          "URL State",
+          "Jest/RTL"
+        ]
+      },
+      {
+        "company": "AI SaaS Product (NDA, Freelance)",
+        "role": "Frontend Developer",
+        "period": "Feb 2024 – Nov 2024",
+        "points": [
+          "Took AI-powered internal interfaces from zero to production using Next.js App Router, TypeScript, and Zustand.",
+          "Improved Lighthouse score from 65 → 88 and reduced LCP by 40% through lazy loading and code splitting.",
+          "Built a production integration with a GrammyJS Telegram bot for automated lead delivery."
+        ],
+        "skills": [
+          "React",
+          "Zustand",
+          "App Router",
+          "Performance Optimization",
+          "Telegram API"
+        ]
+      },
+      {
+        "company": "Baza",
+        "role": "Frontend Developer",
+        "period": "Aug 2023 – Feb 2024",
+        "points": [
+          "Delivered 20+ pixel-perfect components from Figma with complex UI interactions and cross-browser compatibility.",
+          "Ran regular code reviews for a 3-developer team, enforcing semantic HTML5 and a11y standards."
+        ],
+        "skills": [
+          "TypeScript",
+          "Figma",
+          "UI/UX",
+          "Code Review",
+          "a11y"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "description": "Have a project in mind or want to collaborate? Feel free to reach out.",
+    "items": {
+      "email": {
+        "label": "Email",
+        "value": "tymoshenko.d.o@tuta.io"
+      },
+      "github": {
+        "label": "GitHub",
+        "value": "kenmaqqe"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "Dmytro Tymoshenko"
+      },
+      "telegram": {
+        "label": "Telegram",
+        "value": "@kenmaqqe"
+      }
+    },
+    "copyright": "© {year} Dmytro Tymoshenko. All rights reserved.",
+    "backToTop": "Back to Top"
+  },
+  "loader": {
+    "initializing": "INITIALIZING"
+  }
+}

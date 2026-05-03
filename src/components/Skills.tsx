@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap } from "@/lib/gsap";
-import { skillCategories } from "@/data";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { useTranslations, useLocale } from "next-intl";
 import TextReveal from "@/components/ui/TextReveal";
 import { Layout, Palette, Hammer, Zap } from "lucide-react";
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
   Frontend: Layout,
   Styling: Palette,
   Tools: Hammer,
@@ -14,8 +14,11 @@ const iconMap: Record<string, any> = {
 };
 
 export default function Skills() {
+  const t = useTranslations("skills");
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
+
+  const locale = useLocale();
 
   useEffect(() => {
     if (!sectionRef.current || !cardsRef.current) return;
@@ -43,7 +46,26 @@ export default function Skills() {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [locale]);
+
+  const skillData = [
+    {
+      title: t("categories.frontend"),
+      skills: ["React.js", "Next.js", "TypeScript", "JavaScript", "HTML/CSS"],
+    },
+    {
+      title: t("categories.styling"),
+      skills: ["Tailwind CSS", "SASS", "CSS Modules", "Styled Components"],
+    },
+    {
+      title: t("categories.tools"),
+      skills: ["Git", "GitHub", "VS Code", "Figma", "Postman"],
+    },
+    {
+      title: t("categories.other"),
+      skills: ["REST API", "Node.js", "npm/pnpm", "Webpack/Vite"],
+    },
+  ];
 
   return (
     <section
@@ -53,13 +75,13 @@ export default function Skills() {
     >
       <div className="max-w-5xl w-full">
         <TextReveal tag="h2" className="text-3xl md:text-5xl font-bold mb-16 text-center">
-          Skills & Expertise
+          {t("heading")}
         </TextReveal>
         <div
           ref={cardsRef}
           className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
         >
-          {skillCategories.map((category) => {
+          {skillData.map((category) => {
             const Icon = iconMap[category.title] || Zap;
             return (
               <div
@@ -67,7 +89,7 @@ export default function Skills() {
                 className="group p-8 rounded-3xl bg-surface/30 backdrop-blur-md border border-border hover:border-foreground/30 transition-all duration-500 hover:-translate-y-2"
               >
                 <div className="w-12 h-12 rounded-2xl bg-foreground/5 flex items-center justify-center mb-6 group-hover:bg-foreground group-hover:text-background transition-colors duration-500">
-                  <Icon size={24} strokeWidth={1.5} />
+                  <Icon width={24} height={24} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-foreground">
                   {category.title}

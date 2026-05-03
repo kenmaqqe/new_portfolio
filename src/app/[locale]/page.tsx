@@ -8,8 +8,13 @@ import Contact from "@/components/Contact";
 import CustomCursor from "@/components/ui/CustomCursor";
 import EntryLoader from "@/components/ui/EntryLoader";
 
+type Props = {
+  params: Promise<{ locale: string }>;
+};
 
-export default function HomePage() {
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+
   return (
     <>
       <EntryLoader />
