@@ -104,8 +104,6 @@ export default function Projects() {
           {projects.map((project, i) => (
             <div
               key={project.title}
-              data-cursor-text={t("view")}
-              data-cursor-img={project.image}
               className={`bg-surface/50 backdrop-blur-md border border-border rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-foreground/5 hover:border-foreground/20 group ${
                 i === 0 ? "sm:col-span-2" : ""
               }`}
