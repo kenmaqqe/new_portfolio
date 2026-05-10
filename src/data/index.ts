@@ -40,6 +40,14 @@ export const skillCategories: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
+    title: "Дмитро Тютюн — Official Website",
+    description:
+      "Офіційний сайт українського стендап-коміка та блогера (200K+ підписників на YouTube). Сайт включає тур-розклад із квитками, відео-секцію, мерч-магазин та посилання на соцмережі. Виконаний у брендованому стилі з анімаціями, film grain ефектом та кастомним скетчевим оформленням.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Responsive Design", "Ukrainian i18n"],
+    live: "https://www.dmytrotyutyun.com",
+    image: "/projects/tyutyun.png",
+  },
+  {
     title: "BullyChat",
     description:
       "AI-powered chat application supporting Groq LLM provider with markdown rendering and math expressions.",

@@ -37,6 +37,10 @@
     "live": "Live Demo",
     "items": [
       {
+        "title": "Дмитро Тютюн — Official Website",
+        "description": "Official website for a Ukrainian stand-up comedian and blogger (200K+ YouTube subscribers). Features tour schedule with tickets, video section, merch store, and social links. Styled with branded animations, film grain effect, and custom sketch borders."
+      },
+      {
         "title": "BullyChat",
         "description": "AI-powered chat application supporting Groq LLM provider with markdown rendering and math expressions."
       },
